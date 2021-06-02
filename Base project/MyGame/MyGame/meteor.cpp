@@ -7,6 +7,7 @@ Meteor::Meteor(sf::Vector2f pos)
 	sprite_.setTexture(GAME.getTexture("Resources/Meteor.png"));
 	sprite_.setPosition(pos);
 	assignTag("Meteor");
+	setCollisionCheckEnabled(true);
 }
 
 void Meteor::draw()
@@ -24,7 +25,7 @@ void Meteor::update(sf::Time& elapsed) {
 	}
 	else
 	{
-		sprite_.setPosition(sf::Vector2f(pos.x + SPEED * msElapsed, pos.y));
+		sprite_.setPosition(sf::Vector2f(pos.x - SPEED * msElapsed, pos.y));
 	}
 }
 
