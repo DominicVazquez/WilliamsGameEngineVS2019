@@ -20,6 +20,9 @@
     <ClCompile Include="meteor.cpp" />
     <ClCompile Include="MeteorSpawner.cpp" />
     <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="GameOverMessage.cpp" />
+    <ClCompile Include="GameOverScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\AnimatedSprite.h">
@@ -43,6 +46,9 @@
     <ClInclude Include="meteor.h" />
     <ClInclude Include="MeteorSpawner.h" />
     <ClInclude Include="Explosion.h" />
+    <ClInclude Include="Score.h" />
+    <ClInclude Include="GameOverMessage.h" />
+    <ClInclude Include="GameOverScene.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -64,5 +70,18 @@
     <Image Include="Resources\laser.png">
       <Filter>Resources</Filter>
     </Image>
+    <Image Include="Resources\explosion-spritesheet.png">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resources\boom.wav">
+      <Filter>Resources</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\Courneuf-Regular.ttf">
+      <Filter>Resources</Filter>
+    </Font>
   </ItemGroup>
 </Project>
