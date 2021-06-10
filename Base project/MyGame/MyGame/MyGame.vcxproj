@@ -96,6 +96,8 @@
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="Laser.cpp" />
+    <ClCompile Include="SpaceDebris.cpp" />
+    <ClCompile Include="SpaceDebrisSpawner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\AnimatedSprite.h" />
@@ -112,6 +114,8 @@
     <ClInclude Include="MeteorSpawner.h" />
     <ClInclude Include="Score.h" />
     <ClInclude Include="Ship.h" />
+    <ClInclude Include="SpaceDebris.h" />
+    <ClInclude Include="SpaceDebrisSpawner.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\README.md" />
@@ -119,7 +123,10 @@
   <ItemGroup>
     <Image Include="Resources\explosion-spritesheet.png" />
     <Image Include="Resources\laser.png" />
+    <Image Include="Resources\Meteor2.png" />
     <Image Include="Resources\ship.png" />
+    <Image Include="Resources\SpaceDebris.png" />
+    <Image Include="Resources\SpaceShip-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\boom.wav" />

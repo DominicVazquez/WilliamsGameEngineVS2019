@@ -23,6 +23,8 @@
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="GameOverMessage.cpp" />
     <ClCompile Include="GameOverScene.cpp" />
+    <ClCompile Include="SpaceDebris.cpp" />
+    <ClCompile Include="SpaceDebrisSpawner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\AnimatedSprite.h">
@@ -49,6 +51,8 @@
     <ClInclude Include="Score.h" />
     <ClInclude Include="GameOverMessage.h" />
     <ClInclude Include="GameOverScene.h" />
+    <ClInclude Include="SpaceDebris.h" />
+    <ClInclude Include="SpaceDebrisSpawner.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -71,6 +75,15 @@
       <Filter>Resources</Filter>
     </Image>
     <Image Include="Resources\explosion-spritesheet.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Resources\SpaceDebris.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Resources\SpaceShip-2.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Resources\Meteor2.png">
       <Filter>Resources</Filter>
     </Image>
   </ItemGroup>

@@ -3,6 +3,7 @@
 #include "MeteorSpawner.h"
 #include "Score.h"
 #include "GameOverScene.h"
+#include "SpaceDebrisSpawner.h"
 
 GameScene::GameScene()
 {
@@ -12,8 +13,12 @@ GameScene::GameScene()
 	MeteorSpawnerPtr meteorSpawner = std::make_shared<MeteorSpawner>();
 	addGameObject(meteorSpawner);
 
+	SpaceDebrisSpawnerPtr spaceDebrisSpawner = std::make_shared<SpaceDebrisSpawner>();
+	addGameObject(spaceDebrisSpawner);
+
 	ScorePtr score = std::make_shared<Score>(sf::Vector2f(10.0f, 10.0f));
 	addGameObject(score);
+
 }
 
 int GameScene::getScore()
@@ -40,4 +45,9 @@ void GameScene::decreasedlives()
 			GameOverScenePtr gameOverScene = std::make_shared<GameOverScene>(score_);
 			GAME.setScene(gameOverScene);
 	}
+}
+
+void GameScene::increaselives()
+{
+	++lives_;
 }

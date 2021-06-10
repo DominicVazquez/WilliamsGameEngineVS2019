@@ -10,7 +10,7 @@ GameOverMessage::GameOverMessage(int score)
 	text_.setFillColor(sf::Color::Red);
 
 	std::stringstream stream;
-	stream << "GAME OVER\n\nYOUR SCORE: " << score << "\n\nPRESS ENTER TO CONTINUE";
+	stream << "GAME OVER\n\nYOUR SCORE: " << score << "\n\nPRESS ENTER TO CONTINUE\n\nThe sprites were inspired by sprites from VectorStock and Pixel Art Maker.";
 	text_.setString(stream.str());
 }
 

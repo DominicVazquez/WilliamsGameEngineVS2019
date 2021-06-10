@@ -1,23 +1,23 @@
-#include "meteor.h"
+#include "SpaceDebris.h"
 #include "Explosion.h"
 #include "GameScene.h"
 
 const float SPEED = 0.25f;
 
-Meteor::Meteor(sf::Vector2f pos)
+SpaceDebris::SpaceDebris(sf::Vector2f pos)
 {
-	sprite_.setTexture(GAME.getTexture("Resources/Meteor2.png"));
+	sprite_.setTexture(GAME.getTexture("Resources/SpaceDebris.png"));
 	sprite_.setPosition(pos);
-	assignTag("Meteor");
+	assignTag("SpaceDebris");
 	setCollisionCheckEnabled(true);
 }
 
-void Meteor::draw()
+void SpaceDebris::draw()
 {
 	GAME.getRenderWindow().draw(sprite_);
 }
 
-void Meteor::update(sf::Time& elapsed)
+void SpaceDebris::update(sf::Time& elapsed)
 {
 	int msElapsed = elapsed.asMilliseconds();
 	sf::Vector2f pos = sprite_.getPosition();
@@ -25,7 +25,6 @@ void Meteor::update(sf::Time& elapsed)
 	if (pos.x < sprite_.getGlobalBounds().width * -1)
 	{
 		GameScene& scene = (GameScene&)GAME.getCurrentScene();
-		scene.decreasedlives();
 
 		makeDead();
 	}
@@ -35,12 +34,12 @@ void Meteor::update(sf::Time& elapsed)
 	}
 }
 
-sf::FloatRect Meteor::getCollisionRect()
+sf::FloatRect SpaceDebris::getCollisionRect()
 {
 	return sprite_.getGlobalBounds();
 }
 
-void Meteor::handleCollision(GameObject& otherGameObject)
+void SpaceDebris::handleCollision(GameObject& otherGameObject)
 {
 	if (otherGameObject.hasTag("laser"))
 	{
@@ -60,6 +59,11 @@ void Meteor::handleCollision(GameObject& otherGameObject)
 
 		GameScene& scene = (GameScene&)GAME.getCurrentScene();
 		scene.increaseScore();
+		scene.increaseScore();
+		scene.increaseScore();
+		scene.increaseScore();
+		scene.increaseScore();
+		scene.increaselives();
 
 	}
 
